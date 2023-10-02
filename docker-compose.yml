@@ -9,11 +9,11 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     restart: always
-  cachet:
+  statuspage:
     build:
       context: .
       args:
-        - cachet_ver=2.4
+        - statuspage_ver=2.4
     ports:
       - 80:8000
     links:
